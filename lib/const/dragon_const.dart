@@ -1,3 +1,3 @@
-const url = 'https://dragonball-api.com/api/characters';
+const url = 'https://dragonball-api.com/api';
 
 const dragonConst = '$url/characters';

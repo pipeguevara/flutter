@@ -25,13 +25,15 @@ class _ProductScreenState extends State<ProductScreen> {
       products = temporal;
     });
   }
-
+  
   @override
   Widget build(BuildContext context) {
     return Center(
       child: ListView.builder(
         itemCount: products.length,
-        itemBuilder: (context, index) => ListTile(title: Text(products[index].title)),
+        itemBuilder: (context, index) => ListTile(title: Text(products[index].title),
+        subtitle: Text(products[index].description),
+        ),
       ),
     );
   }

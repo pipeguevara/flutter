@@ -17,6 +17,7 @@ class DrawerCoustom extends StatelessWidget {
               subtitle: Text(route.description),
               trailing: Icon(Icons.abc_rounded),
               onTap: () {
+                Navigator.pop(context);
                 context.go(route.patch);
               },
             ));
