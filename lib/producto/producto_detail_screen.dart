@@ -1,4 +1,5 @@
 import 'package:exampple3/service/product_service.dart';
+import 'package:exampple3/widget/layout/card_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductoDetailScreen extends StatefulWidget {
@@ -13,7 +14,6 @@ class _ProductoDetailScreenState extends State<ProductoDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("detail")),
       body: FutureBuilder(
         future: ProductService().getProductounico(widget.id),
         builder: (_, snapshot) {
@@ -25,8 +25,10 @@ class _ProductoDetailScreenState extends State<ProductoDetailScreen> {
             final data = snapshot.data;
             if (data == null) {
               return Text("no hay datos");
+            }else{
+              return CardWidget(product: data);
             }
-            return Text(data.title);
+            
           } else {
             return Text("no hay data");
           }

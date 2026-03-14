@@ -4,6 +4,7 @@ class ProductModel {
   String slug;
   double price;
   String description;
+  List<String> images;
 
   ProductModel({
     required this.id,
@@ -11,6 +12,7 @@ class ProductModel {
     required this.title,
     required this.slug,
     required this.price,
+    required this.images,
   });
   
 
@@ -20,5 +22,6 @@ class ProductModel {
     title: json["title"] ?? 'No title',
     slug: json["slug"] ?? 'not description',
     price: json["price"] ?? 0,
+    images: List<String>.from(json["images"] ?? []),
   );
 }

@@ -10,6 +10,6 @@ List<RouterModel> routerConfig = [
   RouterModel(name: "settings", title: "settings", description: "Esto es un setting", patch: "/settings", widget: (context,state)=>const SettingScreen()),
   RouterModel(name: "user", title: "user", description: "Esto es un user", patch: "/user", widget: (context,state)=>const UserSreen()),
   RouterModel(name: "products", title: "products", description: "Estos son los products", patch: "/product", widget: (context,state)=>const ProductScreen()),
-  RouterModel(name: "dragon", title: "dragon", description: "Estos son los dragon", patch: "/dragon", widget: (context,state)=>const ProductoScreen())
+  RouterModel(name: "products2", title: "products2", description: "Estos son los dragon", patch: "/dragon", widget: (context,state)=>const ProductoScreen())
 
 ];
